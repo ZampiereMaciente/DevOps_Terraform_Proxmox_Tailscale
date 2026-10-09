@@ -1,0 +1,52 @@
+# ==========================================
+# Terraform - Cache e Arquivos Locais
+# ==========================================
+# Pasta onde o Terraform baixa os provedores (plugins)
+.terraform/
+
+# Arquivos de trava de versão de provedor (opcional ignorar, mas recomendado manter em projetos locais simples)
+# .terraform.lock.hcl
+
+# ==========================================
+# Terraform - Estado da Infraestrutura (State)
+# WARNING: O state contém dados sensíveis como senhas e tokens!
+# ==========================================
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# ==========================================
+# Terraform - Arquivos de Variáveis Sensíveis
+# ==========================================
+# Ignora qualquer arquivo .tfvars que contenha suas credenciais reais
+*.tfvars
+*.tfvars.json
+
+# Exceção: Permite versionar apenas o arquivo de exemplo para o template
+!terraform.tfvars.example
+
+# ==========================================
+# Arquivos de Log e Crash
+# ==========================================
+*.log
+crash.log
+crash.*.log
+
+# ==========================================
+# Sistema Operacional e Editores de Código
+# ==========================================
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains / PyCharm / CLion
+.idea/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
